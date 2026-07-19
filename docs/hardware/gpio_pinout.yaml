@@ -1,0 +1,32 @@
+board: Raspberry Pi 4 Model B
+pins:
+  - gpio: 17
+    physical_pin: 11
+    function: vibration_sensor_input
+    direction: input
+    component: SW-420
+    notes: "デジタル出力ピンに接続。プルダウン設定"
+
+  - gpio: 27
+    physical_pin: 13
+    function: photo_switch_input
+    direction: input
+    component: フォトインタラプタ
+    notes: "満巻き位置検知用。1回検知で巻き上げ完了と判定"
+
+  - gpio: 22
+    physical_pin: 15
+    function: motor_driver_in1
+    direction: output
+    component: TB6612FNG
+    notes: "モーター正転/逆転制御"
+
+  - gpio: 23
+    physical_pin: 16
+    function: motor_driver_pwm
+    direction: output
+    component: TB6612FNG
+    notes: "PWMで速度制御"
+
+# 実配線に合わせてピン番号・用途を更新すること。
+# device/wakasagi_device/config/config.example.yaml のgpioセクションと整合させる。

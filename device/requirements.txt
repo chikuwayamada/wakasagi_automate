@@ -1,0 +1,4 @@
+gpiozero>=2.0
+transitions>=0.9
+PyYAML>=6.0
+pytest>=8.0

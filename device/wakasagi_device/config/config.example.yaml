@@ -1,0 +1,25 @@
+# config.yaml としてコピーし、実機の環境に合わせて編集する。
+# device/README.md および docs/hardware/gpio_pinout.yaml を参照。
+
+gpio:
+  vibration_sensor_pin: 17
+  photo_switch_pin: 27
+  motor_driver_in1_pin: 22
+  motor_driver_pwm_pin: 23
+
+sensor:
+  vibration_threshold: 0.6      # 0.0-1.0、デバウンス判定に使う閾値
+  debounce_samples: 5           # 連続で閾値を超えた回数
+  debounce_window_seconds: 1.0
+
+reel:
+  timeout_seconds: 15           # reeling状態でこの秒数を超えたらerrorに遷移
+  motor_speed: 0.8              # 0.0-1.0のPWMデューティ比
+
+bedrock:
+  region: ap-northeast-1
+  model_id: "anthropic.claude-3-haiku-20240307-v1:0"
+  prompt_file: "../cloud/bedrock/prompts/angler_character.md"
+
+output:
+  mode: text                    # text | tts（ttsは未実装）

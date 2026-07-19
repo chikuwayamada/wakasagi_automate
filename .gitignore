@@ -1,0 +1,14 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+*.egg-info/
+
+# Local secrets / real config (keep only config.example.yaml in git)
+device/wakasagi_device/config/config.yaml
+.env
+
+# OS
+.DS_Store
